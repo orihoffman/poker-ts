@@ -2,27 +2,19 @@
   "compilerOptions": {
     "target": "es5",
     "module": "commonjs",
-    "declaration": true,
-    "outDir": "dist",
+    "declaration": true,               // Ensures .d.ts files are generated
+    "outDir": "./dist",                // Compiled .js and .d.ts files go here
+    "rootDir": "./src",                // Specifies the root directory of input files
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "esModuleInterop": true,
-    "baseUrl": ".",
+    "baseUrl": ".",                    // Base path for module resolution
     "paths": {
-      "*": [
-        "node_modules/"
-      ],
-      "types/*": [
-        "src/types/*"
-      ]
+      "types/*": ["src/types/*"]       // Resolves `types` for imports
     }
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "test/**/*.spec.ts"
-  ]
+  "include": ["src/**/*"],             // Includes all .ts files in src
+  "exclude": ["test/**/*.spec.ts"]     // Excludes tests
 }
