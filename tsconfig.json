@@ -3,6 +3,7 @@
     "target": "es5",
     "module": "commonjs",
     "declaration": true,
+    "declarationDir": "dist/types", // Ensures all .d.ts files go here
     "outDir": "dist",
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
@@ -11,18 +12,10 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "paths": {
-      "*": [
-        "node_modules/"
-      ],
-      "types/*": [
-        "src/types/*"
-      ]
+      "*": ["node_modules/"],
+      "types/*": ["src/types/*"]
     }
   },
-  "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "test/**/*.spec.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["test/**/*.spec.ts"]
 }
